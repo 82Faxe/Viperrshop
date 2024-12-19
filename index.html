@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viperr shop</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="nav.js"></script>
+    <script src="card.js"></script>
+    <script>
+ let cart = [];
+
+function addToCart(productName) {
+    cart.push(productName);
+    alert(productName + ' добавлен в корзину!');
+}
+
+function viewCart() {
+    if (cart.length === 0) {
+        alert('Корзина пуста');
+    } else {
+        alert('В вашей корзине: ' + cart.join(', '));
+    }
+}
+    </script>
+</head>
+<body>
+    
+    <header>
+        <h1>Viperr Shop</h1>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#main">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#products">Магазин</a></li>
+                <li><a href="#" onclick="viewCart()">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="main">
+        <div class="full-width-image">
+            <div class="overlay">
+                <h1>VIPERR SHOP — мода для тех, кто ценит стиль.</h1>
+                <p>Ви ай пи дабл ар</p>
+                <button><a href="#about">Подробнее</a></button>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <h2>О нас</h2>
+        <p>Viperr Shop — это магазин, который предлагает уникальную и стильную одежду для тех, кто ценит моду и индивидуальность. Наша команда работает над тем, чтобы предоставить вам только лучшие товары, которые подчеркнут вашу индивидуальность и стиль.</p>
+        <p>Мы стремимся к качеству и удовлетворению потребностей наших клиентов, предлагая только самые актуальные тренды и высококачественные материалы.</p>   
+    </section>
+    <section id="products" class="products-section">
+        <h2>Наши товары</h2>
+        <h3 class="cat">Кросовки</h3>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/2.jpg" alt="Товар 1">
+            <h3 class="names">balenciaga 3xl(black)</h3>
+            <button onclick="addToCart('balenciaga 3xl(black)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/3.jpg" alt="Товар 2">
+            <h3 class="names">balenciaga 3xl(white)</h3>
+            <button onclick="addToCart('balenciaga 3xl(white)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/4.jpg" alt="Товар 3">
+            <h3 class="names">balenciaga 3xl(green)</h3>
+            <button onclick="addToCart('balenciaga 3xl(green)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/5.jpg" alt="Товар 3">
+            <h3 class="names">balenciaga runner(black)</h3>
+            <button onclick="addToCart('balenciaga runner(black)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/6.jpg" alt="Товар 3">
+            <h3 class="names">balenciaga runner(white)</h3>
+            <button onclick="addToCart('balenciaga runner(white)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/7.jpg" alt="Товар 3">
+            <h3 class="names">balenciaga track(black)</h3>
+            <button onclick="addToCart('balenciaga track(black)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/8.jpg" alt="Товар 3">
+            <h3 class="names">balenciaga track(white)</h3>
+            <button onclick="addToCart('balenciaga track(white)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/9.jpg" alt="Товар 3">
+            <h3 class="names">balenciaga track(orange)</h3>
+            <button onclick="addToCart('balenciaga track(orange)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/10.jpg" alt="Товар 3">
+            <h3 class="names">Rick Owens DRKSHDW</h3>
+            <button onclick="addToCart('Rick Owens DRKSHDW')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/11.jpg" alt="Товар 3">
+            <h3 class="names">Raf Simons ozweego</h3>
+            <button onclick="addToCart('Raf Simons ozweego')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/12.jpg" alt="Товар 3">
+            <h3 class="names">Raf Simons ozweego2(brown)</h3>
+            <button onclick="addToCart('Raf Simons ozweego2(brown)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/13.jpg" alt="Товар 3">
+            <h3 class="names">New rock tank(black)</h3>
+            <button onclick="addToCart('New rock tank(black)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/14.jpg" alt="Товар 3">
+            <h3 class="names">New rock tank(white)</h3>
+            <button onclick="addToCart('New rock tank(white)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/15.jpg" alt="Товар 3">
+            <h3 class="names">Adidas campus (korn)</h3>
+            <button onclick="addToCart('Adidas campus (korn)')">В корзину</button>
+        </div>
+        <div class="product-card" onmouseover="rotateCard(this)" onmouseout="resetCard(this)">
+            <img src="image/16.jpg" alt="Товар 3">
+            <h3 class="names">Adidas campus (с мехом)</h3>
+            <button onclick="addToCart('Adidas campus (с мехом)')">В корзину</button>
+        </div>
+    </section>
+    <section id="contacts" class="contacts-section">
+        <h2>Контакты</h2>
+        <p>Создатели: kai(orechnik)angel feat 9(orechnik)mice</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Email: info@viperrshop.com</p>
+        <p>Адрес: Los Angeles</p>
+       
+    </section>
+    
+    <section id="cart" class="cart-section">
+        <h2>Корзина</h2>
+        <p id="cart-items">Ваша корзина пуста.</p>
+        <button onclick="viewCart()">Посмотреть корзину</button>
+    </section>
+</body>
+</html>
