@@ -178,30 +178,7 @@ background-color: #214610;
 }
 
 
-@media (max-width: 768px) {
-    nav .nav-list {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
 
-    nav .nav-list.active {
-        display: block;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    nav .nav-list li {
-        margin: 10px 0;
-        text-align: center;
-    }
-}
 .contacts-section {
   
     text-align: center; 
